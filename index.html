@@ -23,34 +23,36 @@
     <script type="text/javascript", src="/socket.io/socket.io.js"></script>
     <script type="text/javascript", src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
-
     <script type="text/javascript">
       var socket = io();
 
-      var i = 1;
-
-      function dataLoop() {
-        setTimeout(function () {
-          console.log('Temperature: 77');
-          socket.emit('temperature-logged', 'Temperature: 77');
-          i++;
-          if (i < 10) {
-            dataLoop();
-          }
-        }, 1000)
-      }
-
-      dataLoop();
-
       socket.on('temperature-logged', function (temp) {
-        $('#temperature-list').append($('<li>').text(temp));
+        $('#temperature-list').prepend($('<li>').text(temp));
       });
+
+
+      // var i = 1;
+      //
+      // function dataLoop() {
+      //   setTimeout(function () {
+      //     console.log('Temperature: 77');
+      //     socket.emit('temperature-logged', 'Temperature: 77');
+      //     i++;
+      //     if (i < 10) {
+      //       dataLoop();
+      //     }
+      //   }, 1000)
+      // }
+      //
+      // dataLoop();
+
 
       // $('form').submit(function () {
       //   socket.emit('temperature-logged', $('#temperature-form').val());
       //   $('#temperature-form').val('');
       //   return false;
       // });
+
     </script>
 
 

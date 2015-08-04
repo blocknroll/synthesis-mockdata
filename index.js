@@ -7,7 +7,24 @@ app.get('/', function(req, res) {
 });
 
 io.on('connection', function(socket) {
-  // console.log('connection!');
+
+  // PUT TEMP LOOPER HERE???
+  var i = 1;
+
+  function dataLoop() {
+    setTimeout(function () {
+      console.log('temperature-logged ' + '77°F');
+      socket.emit('temperature-logged', '77°F');
+      i++;
+      if (i < 10) {
+        dataLoop();
+      }
+    }, 1000)
+  }
+
+  dataLoop();
+
+
   socket.on('temperature-logged', function (temp) {
     console.log('Temperature: ' + temp);
     io.emit('temperature-logged', temp);

@@ -1,4 +1,4 @@
-var io   = require('socket.io');
+var io   = require('socket.io')();
 var socket = io();
 
 var i = 1;
@@ -6,7 +6,7 @@ var i = 1;
 function dataLoop() {
   setTimeout(function () {
     console.log('Temperature: 77');
-    socket.emit('temperature-logged', 'Temperature: 77');
+    socket.emit('temperature-logged', '77 Fahrenheit');
     i++;
     if (i < 10) {
       dataLoop();
