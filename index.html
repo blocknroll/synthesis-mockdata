@@ -12,6 +12,8 @@
 
     <ul id='temperature-list'>  </ul>
 
+    
+
     <!-- <form action="">
       <input id="temperature-form" autocomplete="off" /><button>log temp</button>
     </form> -->
@@ -29,23 +31,6 @@
       socket.on('temperature-logged', function (temp) {
         $('#temperature-list').prepend($('<li>').text(temp));
       });
-
-
-      // var i = 1;
-      //
-      // function dataLoop() {
-      //   setTimeout(function () {
-      //     console.log('Temperature: 77');
-      //     socket.emit('temperature-logged', 'Temperature: 77');
-      //     i++;
-      //     if (i < 10) {
-      //       dataLoop();
-      //     }
-      //   }, 1000)
-      // }
-      //
-      // dataLoop();
-
 
       // $('form').submit(function () {
       //   socket.emit('temperature-logged', $('#temperature-form').val());
