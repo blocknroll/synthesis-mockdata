@@ -21,6 +21,15 @@ module.exports = function (io) {
     };
     dataLoopUp();
 
+    // function alertTempTooHigh() {
+    //     if (temp > 80) {
+    //       console.log('temperature-too-high');
+    //       socket.emit('temperature-too-high');
+    //     };
+    // };
+    // alertTempTooHigh();
+
+
     // function dataLoopDown() {
     //   setTimeout(function () {
     //     console.log('temperature-logged: ' + temp)

@@ -16,16 +16,8 @@ http.listen(3000, function() {
 
 io.on('connection', function(socket) {
 
-  // socket.on('temperature-logged', function (temp) {
-  //   console.log('Temperature: ' + temp);
-  //   io.emit('temperature-logged', temp);
-  // });
-  //
-  // socket.on('temperature-too-high', function () {
-  //   io.emit('temperature-too-high');
-  // })
-
   socket.on('disconnect', function () {
     console.log('user disconnected');
   });
+  
 });
