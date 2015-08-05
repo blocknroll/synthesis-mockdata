@@ -38,24 +38,22 @@
 
 
     <!-- JS ------------------------------------------------------>
-    <script src="main.bundle.js">
-
-    </script>
     <script type="text/javascript", src="/socket.io/socket.io.js"></script>
     <script type="text/javascript", src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="main.bundle.js"></script>
 
     <script type="text/javascript">
-      var socket = io();
-
-      socket.on('temperature-logged', function (temp) {
-        $('#temperature-list').prepend($('<li>').text(temp));
-      });
-
-      socket.on('temperature-too-high', function (message) {
-        $('#status').text("status:  Air Temperature is above 80!").css({'color': 'red'});
-        $('#temperature-list').css({'color': 'red'});
-        $('#messages').text('text sent: Air Temperature is above 80!');
-      });
+      // var socket = io();
+      //
+      // socket.on('temperature-logged', function (temp) {
+      //   $('#temperature-list').prepend($('<li>').text(temp));
+      // });
+      //
+      // socket.on('temperature-too-high', function (message) {
+      //   $('#status').text("status:  Air Temperature is above 80!").css({'color': 'red'});
+      //   $('#temperature-list').css({'color': 'red'});
+      //   $('#messages').text('text sent: Air Temperature is above 80!');
+      // });
 
       // $('form').submit(function () {
       //   socket.emit('temperature-logged', $('#temperature-form').val());
