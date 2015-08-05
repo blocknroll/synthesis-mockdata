@@ -36,6 +36,7 @@
 
       socket.on('temperature-too-high', function (message) {
         $('#status').append($('<p>').text('temp is above 80!'));
+        $('#temperature-list').css({'color': 'red'});
       });
 
       // $('form').submit(function () {

@@ -4,14 +4,14 @@ module.exports = function (io) {
 
     var i = 1;
     var temp = 75;
-    function dataLoop() {
+    function dataLoopUp() {
       setTimeout(function () {
         console.log('temperature-logged: ' + temp)
         socket.emit('temperature-logged', temp + '°F');
         i++;
         temp++;
         if (i < 10) {
-          dataLoop();
+          dataLoopUp();
         };
         if (temp > 80) {
           console.log('temperature-too-high');
@@ -19,7 +19,26 @@ module.exports = function (io) {
         };
       }, 1000)
     };
-    dataLoop();
+    dataLoopUp();
+
+    // function dataLoopDown() {
+    //   setTimeout(function () {
+    //     console.log('temperature-logged: ' + temp)
+    //     socket.emit('temperature-logged', temp + '°F');
+    //     i++;
+    //     temp--;
+    //     if (i < 10) {
+    //       dataLoopDown();
+    //     };
+    //     if (temp > 80) {
+    //       console.log('temperature-too-high');
+    //       socket.emit('temperature-too-high');
+    //     };
+    //   }, 1000)
+    // };
+    // dataLoopDown();
+
+
 
 
 
@@ -32,9 +51,19 @@ module.exports = function (io) {
       io.emit('temperature-too-high');
     });
 
-    // socket.on('disconnect', function () {
-    //   console.log('user disconnected');
-    // });
   });
 
 };
+
+
+
+        // socket.emit('temperature-logged', 75);
+        // console.log('temperature-logged: 75');
+        // setTimeout(function () {
+        // }, 3000);
+        // socket.emit('temperature-logged', 76);
+        // console.log('temperature-logged: 76');
+        // setTimeout(function () {
+        // }, 3000);
+        // socket.emit('temperature-logged', 77);
+        // console.log('temperature-logged: 77');

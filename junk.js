@@ -43,10 +43,10 @@ var temperature = [
   { fahrenheit: 77 },
   { fahrenheit: 76 },
   { fahrenheit: 75 },
-]
+];
 
 function logArrayElements(object) {
-  console.log(object[fahrenheit]);
+  console.log(object[value]);
 }
 
 temperature.forEach(logArrayElements);
