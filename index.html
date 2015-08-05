@@ -11,12 +11,21 @@
 
   <body>
 
-    <h1>Air Temperature:</h1>
+    <div class="box">
+      <h1>Air</h1>
 
-    <h3 id='status'>status: green</h3>
-    <h4 id='messages'></h4>
+      <div class="box-inner">
+        <h2>Air Temperature</h2>
 
-    <ul id='temperature-list'>  </ul>
+        <h3 id='status'>status: ok</h3>
+
+        <h4 id='messages'></h4>
+
+        <ul id='temperature-list'>  </ul>
+      </div>
+
+    </div>
+
 
 
 
@@ -29,6 +38,9 @@
 
 
     <!-- JS ------------------------------------------------------>
+    <script src="main.bundle.js">
+
+    </script>
     <script type="text/javascript", src="/socket.io/socket.io.js"></script>
     <script type="text/javascript", src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
