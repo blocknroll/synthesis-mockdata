@@ -12,6 +12,7 @@ app.get('/', function(req, res) {
 const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
+
 server.listen(port, function () {
  console.log('Listening on port ' + port + '!!!');
 });
@@ -22,15 +23,7 @@ const dataMock = require('./server/dataMock.js')(io);
 
 
 
-
-
 module.exports = server;
-
-
-
-
-
-
 
 
 
@@ -40,9 +33,4 @@ module.exports = server;
 //     console.log('user disconnected');
 //   });
 //
-// });
-
-
-// http.listen(3000, function() {
-//   console.log('listening on *:3000');
 // });

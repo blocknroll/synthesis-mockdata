@@ -4,6 +4,7 @@ module.exports = function (io) {
 
     var i = 1;
     var temp = 75;
+
     function dataLoopUp() {
       setTimeout(function () {
         console.log('temperature-logged: ' + temp)
@@ -19,15 +20,21 @@ module.exports = function (io) {
         };
       }, 1000)
     };
+    
     dataLoopUp();
 
-    // function alertTempTooHigh() {
-    //     if (temp > 80) {
-    //       console.log('temperature-too-high');
-    //       socket.emit('temperature-too-high');
-    //     };
-    // };
-    // alertTempTooHigh();
+    socket.on('temperature-logged', function (temp) {
+      console.log('Temperature: ' + temp);
+      io.emit('temperature-logged', temp);
+    });
+
+    socket.on('temperature-too-high', function () {
+      io.emit('temperature-too-high');
+    });
+
+  });
+
+};
 
 
     // function dataLoopDown() {
@@ -46,23 +53,6 @@ module.exports = function (io) {
     //   }, 1000)
     // };
     // dataLoopDown();
-
-
-
-
-
-    socket.on('temperature-logged', function (temp) {
-      console.log('Temperature: ' + temp);
-      io.emit('temperature-logged', temp);
-    });
-
-    socket.on('temperature-too-high', function () {
-      io.emit('temperature-too-high');
-    });
-
-  });
-
-};
 
 
 
