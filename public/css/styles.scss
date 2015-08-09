@@ -1,0 +1,22 @@
+$primary-color:   rgba(243,142,25,1.0);   // orange
+$secondary-color: rgba(243,77,44,1.0);  // ??
+
+
+#status  {
+  color: green;
+}
+
+body {
+  background-color: white;
+}
+
+.box {
+  border: 1px rgba(0, 0, 0, 1.0) solid;
+  padding: 10px;
+}
+
+.box-inner {
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  margin: 10px;
+  padding: 10px;
+}
