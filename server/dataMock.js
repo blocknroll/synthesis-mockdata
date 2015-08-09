@@ -72,12 +72,6 @@ module.exports = function (io) {
 
 
 
-    // for (var l = 0; l < 11; l++) {
-    //   temperatureLoop();
-    // };
-
-
-
     socket.on('temperature-logged', function (temp) {
       console.log('Temperature: ' + temp);
       io.emit('temperature-logged', temp);
