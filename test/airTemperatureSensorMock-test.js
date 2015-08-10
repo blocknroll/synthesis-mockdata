@@ -1,7 +1,7 @@
 const assert   = require('chai').assert;
 const airTemperatureSensorMock = require('../server/airTemperatureSensorMock');
 
-describe('the airTemperatureSensorMock', function () {
+describe('airTemperatureSensorMock', function () {
 
   it('exists', function () {
     assert(airTemperatureSensorMock);

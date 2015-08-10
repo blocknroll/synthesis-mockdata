@@ -1,7 +1,7 @@
 const assert   = require('chai').assert;
 const dataMock = require('../server/dataMock');
 
-describe('the dataMock', function () {
+describe('dataMock', function () {
 
   it('exists', function () {
     assert(dataMock);
