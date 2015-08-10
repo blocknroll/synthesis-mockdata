@@ -19,7 +19,7 @@ server.listen(port, function () {
 
 const io   = require('socket.io')(server);
 
-const dataMock = require('./server/dataMock.js')(io);
+const airTemperatureSensorMock = require('./server/airTemperatureSensorMock.js')(io);
 
 
 
