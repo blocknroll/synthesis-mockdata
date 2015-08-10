@@ -14,7 +14,7 @@ socket.on('temperature-ok', function (message) {
   $('#fanCooling-status').text('Cooling fan: OFF').css({'color': 'gray'});
   $('#fanHeating-status').text('Heating fan: OFF').css({'color': 'gray'});
   $('#co2Servo-status').text('CO2 servo: ON').css({'color': 'green'});
-  $('#messages').text('');
+  $('#air-messages').text('');
 });
 
 socket.on('temperature-too-high', function (message) {
@@ -23,7 +23,7 @@ socket.on('temperature-too-high', function (message) {
   $('#fanCooling-status').text('Cooling fan: ON').css({'color': 'red'});
   $('#fanHeating-status').text('Heating fan: OFF').css({'color': 'gray'});
   $('#co2Servo-status').text('CO2 servo: OFF').css({'color': 'gray'});
-  $('#messages').text('text sent: Air Temperature is above 79°F!');
+  $('#air-messages').text('text sent: Air Temperature is above 79°F!');
 });
 
 socket.on('temperature-too-low', function (message) {
@@ -32,5 +32,5 @@ socket.on('temperature-too-low', function (message) {
   $('#fanCooling-status').text('Cooling fan: OFF').css({'color': 'gray'});
   $('#fanHeating-status').text('Heating fan: ON').css({'color': 'red'});
   $('#co2Servo-status').text('CO2 servo: ON').css({'color': 'green'});
-  $('#messages').text('text sent: Air Temperature is below 70°F!');
+  $('#air-messages').text('text sent: Air Temperature is below 70°F!');
 });
