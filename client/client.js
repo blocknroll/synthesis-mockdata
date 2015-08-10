@@ -4,9 +4,13 @@ socket.on('temperature-logged', function (temp) {
   $('#temperature-display').text(temp);
 });
 
-socket.on('temperature-logged', function (temp) {
-  $('#temperature-list').prepend($('<li>').text(temp));
+socket.on('co2-logged', function (co2) {
+  $('#co2-display').text(co2);
 });
+
+// socket.on('temperature-logged', function (temp) {
+//   $('#temperature-list').prepend($('<li>').text(temp));
+// });
 
 socket.on('temperature-ok', function (message) {
   $('#status').text('Status: OK (70°F to 79°F)').css({'color': 'green'});
@@ -32,8 +36,14 @@ socket.on('temperature-too-low', function (message) {
   $('#temperature-display').css({'color': 'red'});
   $('#fanCooling-status').text('Cooling fan: OFF').css({'color': 'gray'});
   $('#fanHeating-status').text('Heating fan: ON').css({'color': 'red'});
-  $('#co2Servo-status').text('CO2 servo: ON').css({'color': 'green'});
+  $('#co2Servo-status').text('CO2 servo: OFF').css({'color': 'gray'});
   $('#air-messages').text('text sent: Air Temperature is below 70°F!');
   // $('#air-messages').prepend($('<li>').text('text sent: Air Temperature is below 70°F!'));
+
+
+
+
+
+
 
 });
