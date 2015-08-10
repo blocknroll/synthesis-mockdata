@@ -20,12 +20,12 @@ body {
   padding: 10px;
   max-width: 440px;
   margin: 0 auto;
-  /*background-image: url(../img/air.jpg);*/
-  background-size: cover;
-  /*filter: url(../img/air.jpg);
-  filter: blur(5px);*/
-  /*filter: alpha(opacity=50);*/
   background-color: rgba(76, 127, 178, 0.3);
+  /*background-image: url(../img/air.jpg);*/
+  /*background-size: cover;*/
+  /*filter: url(../img/air.jpg);
+  /*filter: blur(5px);*/
+  /*filter: alpha(opacity=50);*/
 }
 
 .box-inner {
@@ -34,10 +34,9 @@ body {
   padding: 5px;
   background-color: white;
   opacity: 1.0;
-
 }
 
-#air-temperature-box  {
+#temperature-display-box  {
   float: right;
 }
 
@@ -49,7 +48,7 @@ h1  {
 }
 
 h2  {
-  color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.4);
   font-family: 'Six Caps', Arial, sans-serif;
   font-size: 2.2em;
   font-weight: 100;
