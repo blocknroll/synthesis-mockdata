@@ -19,6 +19,7 @@ server.listen(port, function () {
 
 const io   = require('socket.io')(server);
 
+// const airTemp-ds18b20.js = require('./server/airTemp-ds18b20.js')(io);
 const airTemperatureSensorMock = require('./server/airTemperatureSensorMock.js')(io);
 const airCo2SensorMock         = require('./server/airCo2SensorMock.js')(io);
 
