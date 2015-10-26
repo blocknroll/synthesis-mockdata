@@ -352,7 +352,7 @@
 	__webpack_require__(49);
 
 
-	describe('the test bundle', function () {
+	describe('test bundle', function () {
 
 	  it('is wired up', function () {
 	    assert(true);
@@ -7851,7 +7851,7 @@
 	const assert   = __webpack_require__(10).assert;
 	const dataMock = __webpack_require__(50);
 
-	describe('the dataMock', function () {
+	describe('dataMock', function () {
 
 	  it('exists', function () {
 	    assert(dataMock);

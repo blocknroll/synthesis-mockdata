@@ -40,6 +40,10 @@ body {
   float: right;
 }
 
+#co2-display-box  {
+  float: right;
+}
+
 h1  {
   font-family: 'Work Sans', Arial, sans-serif;
   font-size: 3.4em;
